@@ -14,6 +14,7 @@ import DetailStockTransaction from '@/views/StockTransactions/DetailStockTransac
 import RiwayatTransactionIndex from '@/views/riwayatTransaction/RiwayatTransactionIndex.vue'
 import DetailRiwayatTransaction from '@/views/riwayatTransaction/DetailRiwayatTransaction.vue'
 import LaporanTransactionIndex from '@/views/laporan/LaporanTransactionIndex.vue'
+import SupplierIndex from '@/views/supplier/SupplierIndex.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -157,6 +158,18 @@ const router = createRouter({
             roles: ['Super Admin'],
           },
         },
+
+        // Roles Suppliers Starts
+        {
+          path: '/supplier',
+          name: 'supplier',
+          component: SupplierIndex,
+          meta: {
+            requiresAuth: true,
+            roles: ['Super Admin', 'Admin'],
+          },
+        },
+        // Roles Suppliers Ends
       ],
     },
   ],

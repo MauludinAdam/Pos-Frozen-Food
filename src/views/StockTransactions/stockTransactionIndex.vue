@@ -187,7 +187,7 @@ onMounted(() => {
                             <tr v-else v-for="(item, index) in stockTransaction" :key="item.id">
                                 <td class="text-center">{{ (currentPage - 1) * perPage + index + 1 }}</td>
                                 <td>{{ item.number_transaction }}</td>
-                                <td>{{ item.date }}</td>
+                                <td>{{ new Date(item.date).toLocaleDateString('id-ID') }}</td>
                                 <td>{{ item.sender_name }}</td>
                                 <td>{{ item.user?.name }}</td>
                                 <td>Rp.{{ item.total_quantity }}</td>
@@ -217,7 +217,7 @@ onMounted(() => {
                                 <li class="page-item" v-for="page in lastPage" :key="page"
                                     :class="{ active: currentPage === page }">
                                     <button class="page-link" @click="changePage(page)">{{ page
-                                        }}</button>
+                                    }}</button>
                                 </li>
 
                                 <li class="page-item" :class="{ disabled: currentPage === lastPage }">

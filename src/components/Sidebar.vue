@@ -81,13 +81,13 @@ const route = useRoute();
                         </RouterLink>
                     </li>
                     <li class="pc-item">
-                        <RouterLink :to="{ name: 'product' }" class="pc-link">
+                        <RouterLink :to="{ name: 'supplier' }" class="pc-link">
                             <span class="pc-micon text-white"><i class="fas fa-warehouse"></i></span>
                             <span class="pc-mtext text-white">Supplier</span>
                         </RouterLink>
                     </li>
                     <li class="pc-item">
-                        <RouterLink :to="{ name: 'product' }" class="pc-link">
+                        <RouterLink class="pc-link">
                             <span class="pc-micon text-white"><i class="fas fa-shopping-cart"></i></span>
                             <span class="pc-mtext text-white">Purchase Order</span>
                         </RouterLink>
@@ -128,6 +128,15 @@ const route = useRoute();
                             <span class="pc-mtext text-white">Pengaturan</span>
                         </RouterLink>
                     </li>
+
+                    <li class="pc-item">
+                        <RouterLink :to="{ name: 'product' }" class="pc-link">
+                            <span class="pc-micon text-white"><i
+                                    class="fa-solid fa-person-military-to-person"></i></span>
+                            <span class="pc-mtext text-white">Role & Permission</span>
+                        </RouterLink>
+                    </li>
+
 
                 </ul>
             </div>

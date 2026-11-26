@@ -121,7 +121,8 @@ const deleteData = async (id) => {
         cancelButtonText: "Batal",
     });
 
-    if (!result.isConfirmed) return;
+    if (!result.isConfirmed)
+        return;
 
 
     try {
